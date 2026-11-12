@@ -29,6 +29,7 @@ export class Gerenciador {
   ]);
 
   pendentes = computed(() => this.tarefas().filter(t => !t.concluida).length);
+  temConcluidas = computed(() => this.tarefas().some(t => t.concluida));
 
   atualizarTexto(evento: Event) {
     const campo = evento.target as HTMLInputElement;

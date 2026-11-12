@@ -20,9 +20,11 @@
         <span [class.concluida]="tarefa.concluida">
           {{ tarefa.titulo }}
         </span>
-        <button (click)="alternar(tarefa.id)">
-          {{ tarefa.concluida ? 'Reabrir' : 'Concluir' }}
-        </button>
+        @if (tarefa.concluida) {
+          <button (click)="alternar(tarefa.id)">Reabrir</button>
+        } @else {
+          <button (click)="alternar(tarefa.id)">Concluir</button>
+        }
         <button (click)="excluir(tarefa.id)">Excluir</button>
       </li>
     } @empty {
@@ -30,7 +32,9 @@
     }
   </ul>
 
-  <button (click)="limparConcluidas()">
-    Limpar concluídas
-  </button>
+  @if (temConcluidas()) {
+    <button (click)="limparConcluidas()">
+      Limpar concluídas
+    </button>
+  }
 </section>
