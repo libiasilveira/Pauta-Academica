@@ -9,7 +9,11 @@
 }
 
 h2 {
-  color: #26336e;
+  color: #8b38a2;
+}
+
+h5 {
+  color: #6c757d;
 }
 
 .formulario {
@@ -28,7 +32,7 @@ input {
 button {
   padding: 10px;
   margin: 5px;
-  background: #4056a1;
+  background: #9240a1;
   color: white;
   border: none;
   border-radius: 6px;
